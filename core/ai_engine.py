@@ -47,7 +47,7 @@ Do not be overly technical.
             capture_output=True,
             text=True,
             encoding="utf-8",
-            timeout=25
+            timeout=125
         )
 
         return result.stdout.strip()

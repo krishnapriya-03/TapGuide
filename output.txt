@@ -1,0 +1,45 @@
+Tech Impler X ©) Home-uB X @ Newtah xX + - Oo x 1s < > Q tapguide [Administrator C3 v 8 Oa - =) x
+5 ® ocrenginepyM X Dv % < O © O- EXPLORER
+> G 2% chatgptcom/c/699.. Q DF x Ho Ra : _engine.py ® ©
+core > ® ocr_engine.py > ... \ OPEN EDITORS
+aman sa You, 1 minute ago | 2 authors (krishnapriya-03 and on! >] Welcome Q
+1 pytesseract  test_ai.py
+@ OPTION 1— Run VS Code as Administrator 2 IL import Image r, ——
+5X @ ocrenginep... M
+(Recommended) oy ue =
+4/ eract.pytesseract.tesseract_cmd = r"C ®@ test_hotkey.py M
+1. Close VS Code completely. 5) tract_text_from_image(image_path): } @ output_wind... M S
+2. Click Windows Start. 6 Open the image file I @ ai_engine.py... M bes
+3. Search: Visual Studio Code 7 y age = Image.open(image_path) erarerine!
+4. Right click - Run as Administrator 8
+. : A . Y core Es
+5. Open your project folder again. 9% Extract text using OCR > ache
+6. Activate venv. 10 xt = pytesseract.image_to_string(imag —Pyc _
+44 ®@ ai_engine.py M pay
+7. Run: -
+PROBLEMS OUTPUT TERMINAL «+» oo || £5 x ® ocrenginepy M
+Eb Grpyerts ®@ response_formatter,
+> > © TERMINAL © python +- DW = ape) _ Py ®
+® risk_engine.py
+Gatien eat ieey7 &b > (venv) PS C:\Users\steny\Downloads\tas \ v m
+pguide> python test_hotkey.py AN y ®@
+Now it should work. >» 5 > _pycache.
+with open(filename, 'rb') as outp = @ hotkey listener.py ©
+ut_file: ® screenshot.py
+AAA AAAAAAAAAAAADAADA .
+@ OPTION 2 — Run PowerShell as Administrator FileNotfoundError: [Errno 2] No such val
+Instendlonysi@od es file or directory: 'C:\\Users\\steny\ > _pycache_
+\AppData\\Local\\Temp\\tess_rcbp48u4. @ output_window... M
+1. Close terminal. txt! >
+venv
+2. Open Start. (venv) PS C:\Users\steny\Downloads\ta erin 7
+3. Search: PowerShell v % pguide> python test_hotkey.py capture.png 6)
+4. Right click —- Run as Administrator » O taken
+Program running... Press CTRL + SHIFT y so _-
+++ Ask anything Q co + SPACE ' OUTLINE $63
+6 | > TIMELINE
+CChatGPT can make mistakes. Check important info. See Cookie Preferences. wv X masters © Ble 6% Launchpad @OA\O <—— ©)Golive @Prettier O
+
+00:17
+
+I ZHQMPOmaGe@O@OeaeCeGurz Gn A  @] AN 2% & iso22026
