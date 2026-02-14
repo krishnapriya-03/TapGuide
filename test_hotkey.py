@@ -29,3 +29,4 @@ def run_tapguide():
 
 
 wait_for_hotkey(run_tapguide)
+print("hi")
