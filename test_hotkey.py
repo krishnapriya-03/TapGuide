@@ -1,12 +1,14 @@
+import threading
 from system.hotkey_listener import wait_for_hotkey
 from system.screenshot import capture_screen
 from core.ocr_engine import extract_text_from_image
-from core.response_formatter import process_text
-from ui.output_window import show_message
-
+from ui.output_window import get_output_window
 
 def run_tapguide():
     print("Hotkey triggered...")
+
+    # Get the output window instance
+    app = get_output_window()
 
     # Step 1: Capture screenshot
     image_path = capture_screen()
@@ -17,17 +19,25 @@ def run_tapguide():
     print("OCR TEXT:", text)
 
     if not text or "OCR Error" in text:
-        show_message("OCR failed or no readable text detected.")
+        app.show_message("OCR failed or no readable text detected.")
         return
 
-    # Step 3: Risk + AI
-    result = process_text(text)
-    print("AI RESULT:", result)
-
-    # Step 4: Show AI explanation in popup
-    ai_explanation_content = result["ai_explanation"]
-    print("AI EXPLANATION FOR POPUP:", ai_explanation_content)
-    show_message(ai_explanation_content)
+    # Step 3: Show the extracted text in the popup.
+    # The OutputWindow will handle getting the initial AI explanation.
+    app.show_message(text)
 
 
-wait_for_hotkey(run_tapguide)
+if __name__ == '__main__':
+    # Get the single instance of the output window
+    app = get_output_window()
+
+    # The hotkey listener needs to run in a separate thread
+    # so it doesn't block the Tkinter main loop.
+    hotkey_thread = threading.Thread(target=wait_for_hotkey, args=(run_tapguide,), daemon=True)
+    hotkey_thread.start()
+
+    print("Hotkey listener started in the background.")
+    print("Press the hotkey to trigger the guide.")
+    
+    # Start the Tkinter main loop in the main thread
+    app.run()
