@@ -25,8 +25,9 @@ def run_tapguide():
     print("AI RESULT:", result)
 
     # Step 4: Show AI explanation in popup
-    show_message(result["ai_explanation"])
+    ai_explanation_content = result["ai_explanation"]
+    print("AI EXPLANATION FOR POPUP:", ai_explanation_content)
+    show_message(ai_explanation_content)
 
 
 wait_for_hotkey(run_tapguide)
-print("hi")

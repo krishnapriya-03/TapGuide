@@ -9,34 +9,32 @@ def generate_explanation(text):
     """
 
     prompt = f"""
-You are a system safety assistant.
+You are a Windows system safety assistant.
 
-Explain the following system message clearly to a non-technical user.
+Explain the system message below in simple language for a non-technical or elderly user.
 
-Message:
 {text}
 
 Respond strictly in this format:
 
-What This Means:
-<2-3 sentence explanation>
+SUMMARY:
+(1–2 short sentences explaining what it means)
 
-Risk Level:
-<Low / Medium / High>
+RISK LEVEL:
+(Low / Medium / High)
 
-Possible Impact:
-- Bullet point 1
-- Bullet point 2
-- Bullet point 3
+WHY THIS MATTERS:
+(One short sentence)
 
-How To Proceed Safely:
-1. Step one
-2. Step two
-3. Step three
+SAFE STEPS:
+1.
+2.
+3.
 
 Keep it under 60 words.
-Be practical and realistic.
-Do not be overly technical.
+Do not add extra commentary.
+Be calm and clear.
+
 """
 
 
@@ -47,7 +45,7 @@ Do not be overly technical.
             capture_output=True,
             text=True,
             encoding="utf-8",
-            timeout=125
+            
         )
 
         return result.stdout.strip()
