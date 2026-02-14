@@ -11,26 +11,43 @@ def generate_explanation(text):
     prompt = f"""
 You are a system safety assistant.
 
-Explain the following system message to a non-technical user.
+Explain the following system message clearly to a non-technical user.
 
 Message:
 {text}
 
-Provide:
-1. What this means
-2. Risk level (Low/Medium/High)
-3. What might happen
-4. Recommendation
+Respond strictly in this format:
 
-Keep response clear and under 120 words.
+What This Means:
+<2-3 sentence explanation>
+
+Risk Level:
+<Low / Medium / High>
+
+Possible Impact:
+- Bullet point 1
+- Bullet point 2
+- Bullet point 3
+
+How To Proceed Safely:
+1. Step one
+2. Step two
+3. Step three
+
+Keep it under 60 words.
+Be practical and realistic.
+Do not be overly technical.
 """
+
 
     try:
         result = subprocess.run(
             ["ollama", "run", "phi3:mini"],
             input=prompt,
             capture_output=True,
-            text=True
+            text=True,
+            encoding="utf-8",
+            timeout=25
         )
 
         return result.stdout.strip()
