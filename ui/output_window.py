@@ -112,30 +112,7 @@ class OutputWindow:
             self.text_widget.configure(state="normal")
             self.text_widget.delete("1.0", tk.END)
             # Initial prompt for the AI is the OCR'd text, but we only show the AI's response.
-            self.conversation_history.append({"role": "system", "content": """You are an assistant that provides concise, structured advice. You MUST follow this format exactly:
-
-One single most important safety sentence.
-
-MEANING:
-Explain in 1–2 short sentences.
-
-RISK:
-Only one word: Low, Medium, or High.
-
-ACTION:
-1. Short step.
-2. Short step.
-3. Short step.
-
-Rules:
-- Keep total response under 100 words.
-- Use simple language.
-- No extra commentary.
-- No markdown.
-- No emojis.
-
-Your task is to analyze the user's text and respond in the format above.
-"""})
+            self.conversation_history.append({"role": "system", "content": """You are an assistant. Provide a very brief and direct explanation (under 20 words)."""})
             self.conversation_history.append({"role": "user", "content": text})
             # Run AI in a thread to avoid blocking GUI
             self.text_widget.insert(tk.END, "AI Assistant is thinking...\n\n")

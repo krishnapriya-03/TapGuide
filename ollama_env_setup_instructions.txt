@@ -1,0 +1,32 @@
+To set the `OLLAMA_NUM_THREADS` environment variable on Windows, follow these instructions:
+
+**For the current session (temporary):**
+
+1.  Open **Command Prompt** or **PowerShell**.
+2.  Determine the number of CPU cores you want Ollama to use. (You can find this in Task Manager -> Performance -> CPU -> Cores).
+3.  **If using Command Prompt:**
+    ```cmd
+    set OLLAMA_NUM_THREADS=X
+    ```
+    (Replace `X` with your desired number of cores, e.g., `set OLLAMA_NUM_THREADS=8`)
+
+4.  **If using PowerShell:**
+    ```powershell
+    $env:OLLAMA_NUM_THREADS=X
+    ```
+    (Replace `X` with your desired number of cores, e.g., `$env:OLLAMA_NUM_THREADS=8`)
+
+    Run this command *before* starting Ollama or any application that uses Ollama from that same terminal session.
+
+**To make the environment variable persistent across sessions:**
+
+1.  Search for "Environment Variables" in the Windows search bar and select "Edit the system environment variables".
+2.  In the "System Properties" dialog, click on the "Environment Variables..." button.
+3.  Under either "User variables for <Your Username>" (for your user only) or "System variables" (for all users), click "New...".
+4.  In the "New User/System Variable" dialog:
+    *   For "Variable name", enter: `OLLAMA_NUM_THREADS`
+    *   For "Variable value", enter your desired number of CPU cores (e.g., `8`)
+5.  Click "OK" on all open dialogs to save the changes.
+6.  **Important:** Restart any open Command Prompt or PowerShell windows, and any applications that use Ollama, for the changes to take effect.
+
+This configuration should help Ollama utilize your CPU more efficiently, potentially reducing the AI's output production duration.
